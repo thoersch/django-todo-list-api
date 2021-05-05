@@ -1,10 +1,12 @@
 ## Django rest api for react-native seed project
 
 * Djangorestframework
+* Vagrant
 
 ## Sample Todo List App API
 Typical CRUD operations on a Todo List (add new todo, complete a todo, remove completed todos)
 
+Front end project: https://github.com/thoersch/react-native-ts-seed
 
 ## Running to App
 
