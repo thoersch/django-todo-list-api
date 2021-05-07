@@ -11,6 +11,7 @@ Front end project: https://github.com/thoersch/react-native-ts-seed
 ## Running to App
 
 * vagrant up
+* source env/bin/activate
 * python manage.py migrate
 * python manage.py runserver 0.0.0.0:8080
 

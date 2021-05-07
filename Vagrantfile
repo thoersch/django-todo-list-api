@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     # Set Ubuntu Language
     sudo locale-gen en_GB.UTF-8
     # Install Python, SQLite and pip
-    sudo apt-get install -y python3-dev python3 sqlite python-pip
+    sudo apt-get install -y python3-dev python3 python3-venv sqlite python-pip
     # Upgrade pip to the latest version.
     sudo pip install --upgrade pip
     # Install and configure python virtualenvwrapper.
@@ -22,6 +22,14 @@ Vagrant.configure("2") do |config|
         echo "PROJECT_HOME=/vagrant" >> /home/vagrant/.bashrc
         echo "source /usr/local/bin/virtualenvwrapper.sh" >> /home/vagrant/.bashrc
     fi
+
+    python3 -m venv env
+    source env/bin/activate
+
+    pip install django
+    pip install djangorestframework
+
+
   SHELL
 
 end

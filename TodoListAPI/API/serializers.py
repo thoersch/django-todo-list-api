@@ -6,3 +6,6 @@ class TodoSerializer(serializers.ModelSerializer):
         model = Todo
         fields = ['id', 'title', 'done', 'created']
         extra_kwargs = {'title': {'required': True}, 'done': {'required': True}}
+
+class IdsSerializer(serializers.Serializer):
+    ids = serializers.ListField(child = serializers.IntegerField())
